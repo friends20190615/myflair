@@ -1,0 +1,77 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.myflair.admin.user.dao.UserDao">
+	<sql id="userparam">
+		<if test="username!=null">
+	    	and username = #{username}
+	    </if>
+	    <if test="email!=null">
+	    	and email = #{email}
+	    </if>
+	     <if test="mobile!=null">
+	    	and mobile = #{mobile}
+	    </if>
+	    <if test="status!=null">
+	    	and status = #{status}
+	    </if>
+	     <if test="roleId!=null">
+	    	and role_id = #{roleId}
+	    </if>
+	    <if test="password!=null">
+	    	and password = #{password}
+	    </if>
+	</sql>
+	<select id="selectById" resultType="User" parameterType="java.lang.Long">
+		select  id, username, email, mobile, nick, status, role_id as roleId,create_time as createTime, update_time as updateTime,password  from t_portal_user
+	    where id = #{id}
+	</select> 
+	
+	<select id="query" resultType="User" parameterType="map">
+		select   id, username, email, mobile, nick, status,  role_id as roleId,create_time as createTime, update_time as updateTime,password from t_user
+	    where 1=1  
+	     <include refid="userparam"/>
+	</select> 
+	
+	<select id="queryList" resultType="User" parameterType="map">
+		select   id, username, email, mobile, nick, status,  role_id as roleId,create_time as createTime, update_time as updateTime from t_user
+	    where 1=1 
+	     <include refid="userparam"/>
+		order by create_time desc limit #{start},#{pageSize}
+	</select> 
+	
+	<select id="queryCount" resultType="int" parameterType="java.util.HashMap">
+		select  count(id) from t_user
+	    where 1=1 
+	    <include refid="userparam"/>
+	</select> 
+	
+	
+	<insert id="insert" parameterType="User">
+		insert into t_user (username, email, mobile, nick, status, role_id,create_time, update_time,password)
+	    values (#{username},#{email},#{mobile},#{nick},#{status},#{roleId},#{createTime},#{updateTime},#{password})
+	</insert>
+	
+	<update id="update" parameterType="User">
+		<![CDATA[
+			UPDATE t_user SET
+				username = #{username}
+				,email = #{email}
+				,mobile = #{mobile}
+				,nick = #{nick}
+				,status = #{status}
+				,role_id= #{roleId}
+				,create_time = #{createTime}
+				,update_time = #{updateTime}
+				,password = #{password}
+			WHERE id = #{id}		
+			]]>
+	</update>
+
+	<delete id="delete" parameterType="long">
+		DELETE FROM t_user
+			WHERE id = #{id}
+	</delete>
+
+
+</mapper> 

@@ -1,0 +1,15 @@
+# Dependency directory
+node_modules
+
+#build files
+dist
+target
+.project
+.settings
+.classpath
+.idea
+.DS_Store
+.checkstyle
+*.iml
+WebContent
+bin

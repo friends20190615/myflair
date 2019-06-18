@@ -1,0 +1,143 @@
+.hiSlider-pages,
+.hiSlider-title {
+    position: absolute;
+    z-index: 3;
+    display: none;
+}
+
+.hiSlider-wrap {
+    position: relative;
+    width: 812px;
+    height: 500px;
+    overflow: hidden;
+    top: 19px;
+    margin: 0 auto;
+    left: -3px;
+}
+
+.hiSlider {
+    position: relative;
+}
+
+.hiSlider-item {
+    position: absolute;
+    left: 0;
+    top: 0;
+    display: none;
+    width: 812px;
+    height: 501px;
+    overflow: hidden;
+}
+
+.zoomableContainer {
+    height: 510px;
+    overflow: hidden;
+    text-align: center;
+}
+.hiSlider1 span{
+    height: 100%;
+    display: inline-block;
+    vertical-align: middle;
+}
+.hiSlider-item img {
+    max-width: 812px;
+    max-height: 501px;
+    position: relative;
+    visibility: hidden;
+}
+
+.hiSlider-btn-prev,
+.hiSlider-btn-next {
+    width: 50px;
+    height: 50px;
+    overflow: hidden;
+    margin: -25px 0 0;
+    display: block;
+    background: url(../images/icon1.png) no-repeat 0 -58px;
+    position: absolute;
+    top: 50%;
+    z-index: 10;
+    cursor: pointer;
+    line-height: 9999em;
+}
+.video_slider {
+    width: 810px;
+    float: left;
+    left: 0;
+    top: 0;
+}
+.video_slider .sliderInner{
+    width: 810px;
+    margin: 0 auto;
+}
+.video_slider .sliderInner .hiSlider {
+    width: 100%;
+    height: 500px;
+}
+.video_slider .sliderInner .hiSlider-item{
+    width: 810px;
+    height: 500px;
+    overflow: hidden;
+}
+.video_slider .sliderInner .title{
+    position: absolute;
+    width: 810px;
+    height: 35px;
+    line-height: 35px;
+    text-align: center;
+    background: rgba(102,102,102,.5);
+    color: #fff;
+    top: 0;
+    z-index: 2;
+    font-size: 12px;
+}
+.hiSlider-btn-prev {
+    left: 5px;
+}
+
+.hiSlider-btn-next {
+    background-position: 0 0;
+    right: 5px;
+}
+
+.hiSlider-btn-next:hover {
+    background-position: -59px -58px;
+}
+
+.hiSlider-btn-prev:hover {
+    background-position: -59px 0;
+}
+
+.hiSlider-title {
+    bottom: 0;
+    width: 100%;
+    padding: 6px 0;
+    color: #fff;
+    text-indent: 10px;
+    background: rgba(0, 0, 0, .6);
+    z-index: 2;
+    font: 14px/2 "Microsoft YaHei", Arial, Tahoma
+}
+
+.hiSlider-pages {
+    bottom: 10px;
+    right: 10px;
+    text-align: right;
+    display: none;
+}
+
+.hiSlider-pages a {
+    height: 12px;
+    width: 12px;
+    margin: 0 6px;
+    display: inline-block;
+    overflow: hidden;
+    text-indent: -100px;
+    font-size: 0;
+    border-radius: 50%;
+    background: #ddd
+}
+
+.hiSlider-pages a.active {
+    background: #5472BF
+}

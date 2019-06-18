@@ -1,0 +1,99 @@
+.carousel {
+    position: relative;
+    margin: 0px;
+    padding: 0px;
+    -moz-user-select: none;
+    -webkit-user-select: none;
+}
+#carousel img{
+    visibility: hidden;
+}
+.carousel .carousel-item {
+    background-position: center;
+    background-repeat: no-repeat;
+    background-color: #FFF;
+    position: absolute;
+    cursor: pointer;
+    margin-top: -35px;
+    overflow: hidden;
+}
+
+.carousel .out {
+    border: #3f3f3f 7px solid;
+}
+
+.carousel .click {
+    border: #3f3f3f 7px solid;
+    -moz-box-shadow: 0px 0px 10px #000;
+    -webkit-box-shadow: 0px 0px 10px #000;
+    box-shadow: 0px 0px 10px #000;
+    -ms-filter: "progid:DXImageTransform.Microsoft.Shadow(Strength=4, Direction=130, Color=#000000)";
+}
+.carousel .tooltip {
+    position: absolute;
+    z-index: 9999;
+    background-color: #DDD;
+    margin-bottom: 20px;
+    border: #EEE solid 4px;
+    border-radius: 8px;
+    -moz-border-radius: 8px;
+    -webkit-border-radius: 8px;
+}
+
+.carousel .tooltip p {
+    color: #999;
+    padding: 10px;
+    margin: 0px;
+}
+
+.carousel .scrollbar {
+    width: 735px;
+    position: absolute;
+    bottom: 40px;
+    left: 80px;
+    height: 20px;
+    background-color: #000;
+    top: auto !important;
+    border-radius: 15px;
+}
+
+.carousel .scrollbar .track {
+    background-color: #141414;
+    width: 695px;
+    height: 9px;
+    position: absolute;
+    left: 20px;
+    top: 6px;
+    border-radius: 15px;
+}
+
+.carousel .scrollbar .thumb {
+    background-color: #4f504b;
+    width: 70px;
+    height: 9px;
+    position: absolute;
+    cursor: pointer;
+    border-radius: 15px;
+}
+
+.carousel .scrollbar .left {
+    width: 15px;
+    height: 15px;
+    position: absolute;
+    cursor: pointer;
+    left: 5px;
+    top: 3px;
+    border-radius: 50%;
+    background: #13140f url(../images/arrow_l.jpg) no-repeat center center;
+}
+
+.carousel .scrollbar .right {
+    height: 15px;
+    position: absolute;
+    cursor: pointer;
+    right: 5px;
+    border-radius: 50%;
+    width: 15px;
+    background: #13140f url(../images/arrow_r.jpg) no-repeat center center;
+    top: 3px;
+}

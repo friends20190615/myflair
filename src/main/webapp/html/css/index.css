@@ -1,0 +1,1154 @@
+html,
+body {
+    background: #1D1D1D;
+}
+
+::-webkit-scrollbar {
+    width: 12px;
+    height: 12px;
+    background: #1D1D1D;
+}
+
+::-webkit-scrollbar-track {
+    border-radius: 15px;
+    background-color: #151412;
+    height: 9px;
+    width: 9px;
+}
+
+::-webkit-scrollbar-corner {
+    background: #1D1D1D;
+}
+
+::-webkit-scrollbar-thumb {
+    background-color: #4f504b;
+    width: 70px;
+    height: 9px;
+    position: absolute;
+    cursor: pointer;
+    border-radius: 15px;
+}
+
+::-webkit-scrollbar-button {
+    width: 15px;
+    height: 15px;
+    border-radius: 50%;
+    background: #13140f url(../images/arrow_l.jpg) no-repeat center center;
+}
+
+.loading {
+    position: absolute;
+    z-index: 999;
+    left: 50%;
+    top: 50%;
+    margin-left: -20px;
+    margin-top: -20px;
+}
+
+.loading i {
+    display: block;
+    background: url(../images/loading.png) center center no-repeat;
+    -webkit-animation: spin 1.5s infinite linear;
+    animation: spin 1.5s infinite linear;
+    width: 41px;
+    height: 41px;
+    margin: 0 auto
+}
+
+.loading em {
+    color: #fff;
+    line-height: 25px;
+    font-style: normal;
+}
+
+@keyframes spin {
+    0% {
+        -webkit-transform: rotate(0);
+        transform: rotate(0)
+    }
+    100% {
+        -webkit-transform: rotate(359deg);
+        transform: rotate(359deg)
+    }
+}
+
+.page1 {
+    background-position: center center;
+    background-repeat: no-repeat;
+    height: 100%;
+}
+
+.section {
+    position: relative;
+    min-height: 500px;
+}
+
+.section .down {
+    position: absolute;
+    bottom: -40px;
+    background: url(../images/down.png) no-repeat center center;
+    width: 26px;
+    height: 27px;
+    left: 50%;
+    margin-left: -13px;
+    cursor: pointer;
+}
+
+.section.page1 .down {
+    bottom: 10px;
+}
+
+.section .up_top {
+    background: url(../images/up_top.png) no-repeat center center;
+    bottom: -22px;
+}
+
+.section .up_top span {
+    position: absolute;
+    font-size: 12px;
+    color: #6f6f6f;
+    bottom: -20px;
+    width: 80px;
+    left: -12px;
+    font-family: 宋体
+}
+
+.section .qq_tel {
+    background: url(../images/qq_tel.png) no-repeat center center;
+    width: 186px;
+    height: 31px;
+    bottom: -50px;
+    position: absolute;
+    right: 37px;
+    cursor: pointer;
+}
+
+.section .qq {
+    width: 51px;
+    height: 31px;
+    bottom: 0px;
+    position: absolute;
+    right: 0;
+    cursor: pointer;
+}
+
+.section .qq_tel .qq_list {
+    position: absolute;
+    width: 118px;
+    border: solid 1px #6c6c6c;
+    background: #131313;
+    bottom: 0;
+    right: -65px;
+    border-radius: 5px;
+    color: #6f6f6f;
+    font-size: 12px;
+    padding-top: 5px;
+    display: none;
+}
+
+.section .qq_tel .qq_list li {
+    padding: 7px 0;
+    margin: 0 10px;
+    border-bottom: solid 1px #222;
+    overflow: hidden;
+    text-align: center;
+}
+
+.section .qq_tel .qq_list li.close {
+    background: url(../images/icon_close.png) no-repeat center center;
+    width: 16px;
+    height: 18px;
+    right: -8px;
+    top: -7px;
+    position: absolute;
+    z-index: 1;
+    padding: 0;
+    border:0;
+}
+
+.section .qq_tel .qq_list li a {
+    cursor: pointer;
+}
+
+.section .qq_tel .qq_list li:first-child {
+    margin: 0
+}
+
+.section .qq_tel .qq_list li i {
+    float: left;
+    width: 20px;
+    height: 22px;
+    background: url(../images/qe_nor.png) no-repeat center center;
+    margin-top: 4px;
+}
+
+.section .qq_tel .qq_list li span {
+    float: left;
+    margin-left: 5px;
+    text-align: left;
+}
+
+.section .qq_tel .qq_list li a:hover {
+    color: #188DBA;
+}
+
+.section .qq_tel .qq_list li a:hover i {
+    background: url(../images/qe_hover.png) no-repeat center center;
+}
+
+.section .copyright {
+    font-size: 12px;
+    position: absolute;
+    bottom: -40px;
+    left: 40px;
+    color: #6f6f6f;
+}
+
+.page2 {}
+
+.page2 .flow {
+    overflow: hidden;
+    position: relative;
+}
+
+.page2 .flow .ibg-bg {
+    height: 100% !important;
+}
+
+.page2 .flow .picandnav {
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    margin-top: -324px;
+    height: 620px;
+    width: 900px;
+    margin-left: -450px;
+}
+
+.page2 .flow .picandnav .hot {
+    height: 35px;
+    width: 826px;
+    margin: -63px auto 0;
+}
+
+.page2 .flow .picandnav .close_bg {
+    position: absolute;
+    background: url(../images/close_big.png) no-repeat;
+    width: 33px;
+    height: 33px;
+    right: 13px;
+    top: -9px;
+    cursor: pointer;
+}
+
+.page2 .flow .picandnav .line {
+    height: 0;
+    opacity: 0;
+    position: absolute;
+    left: 50%;
+    top: 550px;
+    width: 10px;
+    background: url(../images/xiala.png) no-repeat center bottom;
+    margin-left: -5px;
+}
+
+.page2 .flow .picandnav .line_show {
+    opacity: 1;
+    height: 50px;
+}
+
+.page2 .flow .pic_box {
+    height: 550px;
+    background: url(../images/bg03.png) no-repeat center center;
+    margin: 20px auto;
+    width: 896px;
+    position: relative;
+}
+
+.page2 .flow .pic_box i.icon_menu {
+    width: 28px;
+    height: 28px;
+    background: #363635 url(../images/icon_menu.png) no-repeat center center;
+    position: absolute;
+    right: 16px;
+    top: -4px;
+    z-index: 16;
+    border-radius: 50%;
+    cursor: pointer;
+}
+
+.page2 .flow .pic_box .picflow {
+    height: 520px;
+    width: 814px;
+    margin: 0 auto 0;
+    position: relative;
+}
+
+.page2 .flow .pic_box .page2picflow {
+    right: -60px;
+    top: 10px;
+    width: 850px;
+}
+
+.page2 .flow .pic_box .zoom {
+    display: block;
+    margin: 0 auto;
+    position: relative;
+    top: 28px;
+    left: -60px;
+}
+
+.page2 .flow .pic_box .zoom img {
+    position: relative;
+    display: block;
+    margin: 0 auto;
+}
+
+.page2 .flow .pic_box .zoomStyle {
+    border-radius: 50%;
+    border: solid 1px #999;
+}
+
+.page2 .flow .pic_box .picflow .ibg-bg {
+    position: absolute;
+    top: 24px;
+}
+
+.page2 .nav_out {
+    height: 65px;
+    overflow: hidden;
+    margin-top: -40px;
+    cursor: pointer;
+}
+
+.page2 .nav {
+    width: 832px;
+    margin: 0 auto;
+    overflow: hidden;
+    transform: matrix3d(1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1, 0, 0, -3, 0, 1);
+    -webkit-transform: matrix3d(1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1, 0, 0, -3, 0, 1);
+}
+
+.page2 .nav li {
+    float: left;
+    width: 138px;
+    text-align: center;
+    height: 65px;
+    cursor: pointer;
+    color: #424242;
+    line-height: 300px;
+    transform: matrix3d(1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1, 0, 0, -80, 0, 1);
+    -webkit-transform: matrix3d(1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1, 0, 0, -80, 0, 1);
+}
+
+.page2 .nav li.logo {
+    background: url(../images/nav_logo.png) no-repeat;
+    cursor: default;
+}
+
+.page2 .nav li.home {
+    background: url(../images/index.png) no-repeat;
+}
+
+.page2 .nav.act li.home {
+    background: url(../images/index_icon.png) no-repeat;
+}
+
+.page2 .nav li.home:hover {
+    background: url(../images/index_hover.png) no-repeat;
+}
+
+.page2 .nav li.home.cur {
+    background: url(../images/index_act.png) no-repeat;
+}
+
+.page2 .nav li.about {
+    background: url(../images/about.png) no-repeat;
+}
+
+.page2 .nav.act li.about {
+    background: url(../images/about_icon.png) no-repeat;
+}
+
+.page2 .nav li.about:hover {
+    background: url(../images/about_hover.png) no-repeat;
+}
+
+.page2 .nav li.about.cur {
+    background: url(../images/about_act.png) no-repeat;
+}
+
+.page2 .nav li.service {
+    background: url(../images/service.png) no-repeat;
+}
+
+.page2 .nav.act li.service {
+    background: url(../images/service_icon.png) no-repeat;
+}
+
+.page2 .nav li.service:hover {
+    background: url(../images/service_hover.png) no-repeat;
+}
+
+.page2 .nav li.service.cur {
+    background: url(../images/service_act.png) no-repeat;
+}
+
+.page2 .nav li.youshi {
+    background: url(../images/youshi.png) no-repeat;
+}
+
+.page2 .nav.act li.youshi {
+    background: url(../images/youshi_icon.png) no-repeat;
+}
+
+.page2 .nav li.youshi:hover {
+    background: url(../images/youshi_hover.png) no-repeat;
+}
+
+.page2 .nav li.youshi.cur {
+    background: url(../images/youshi_act.png) no-repeat;
+}
+
+.page2 .nav li.contract {
+    background: url(../images/contract.png) no-repeat;
+}
+
+.page2 .nav li.contract:hover {
+    background: url(../images/contract_hover.png) no-repeat;
+}
+
+.page2 .nav.act li.contract {
+    background: url(../images/contract_icon.png) no-repeat;
+}
+
+.page2 .nav li.contract.cur {
+    background: url(../images/contract_act.png) no-repeat;
+}
+
+.page2 .nav_hide {
+    transform: matrix3d(1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1, 0, 0, -80, 0, 1);
+    -webkit-transform: matrix3d(1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1, 0, 0, -80, 0, 1);
+}
+
+.page2 .nav_hide li {
+    transform: matrix3d(1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1);
+    -webkit-transform: matrix3d(1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1);
+}
+
+.page2 .nav_show {
+    transform: matrix3d(1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1);
+    -webkit-transform: matrix3d(1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1);
+}
+
+.page2 .nav li a {
+    display: block;
+    position: relative;
+    top: 10px;
+    color: #424242;
+}
+
+.page2 .nav li.logo a {
+    top: 0;
+}
+
+.page2 .nav li span {
+    font-size: 12px;
+    position: relative;
+    display: block;
+}
+
+.page2 .nav li.logo img {
+    display: block;
+    margin: 8px auto;
+    width: 60px;
+}
+
+.page2 .nav li.cur a {
+    color: #00c0ff;
+}
+
+.page2 .nav li:hover a {
+    color: #00c0ff;
+}
+
+.page3 .pic_box .items {
+    position: absolute;
+    top: 19px;
+    width: 810px;
+    height: 500px;
+    background: #000;
+}
+
+.page3 .pic_box .loadItems {
+    visibility: hidden;
+}
+
+.page3 .pic_box .items .item {
+    position: absolute;
+    overflow: hidden;
+    cursor: pointer;
+}
+
+.page3 .pic_box .items .item .info {
+    color: #fff;
+    position: absolute;
+    bottom: 10px;
+    left: 10px;
+    line-height: 25px;
+    -webkit-transition: opacity 0.35s, -webkit-transform .35s;
+    transition: opacity 0.35s, transform .35s;
+    opacity: 0;
+    -webkit-transform: scale3d(0.8, 0.8, 1);
+    transform: scale3d(0.8, 0.8, 1);
+    -webkit-transform-origin: 50% -100%;
+    transform-origin: 50% -100%;
+    z-index: 2
+}
+
+.page3 .pic_box .items .item .info p {
+    font-size: 12px;
+    clear: both;
+    line-height: 25px;
+    color: #9e9e9e
+}
+
+.page3 .pic_box .items .item .info span {
+    font-size: 14px;
+    float: left;
+    padding: 0 5px;
+    border: solid 1px #fff;
+    clear: both;
+}
+
+.page3 .pic_box .items .item .info1 {
+    border: solid 2px #fff;
+    text-align: center;
+    line-height: 18px;
+    padding: 8px 5px 2px;
+    bottom: 20px;
+    opacity: 1;
+    -webkit-transform: scale3d(01, 1, 1);
+    transform: scale3d(1, 1, 1);
+}
+
+.page3 .pic_box .items .item .info1 span {
+    border: 0;
+}
+
+.page3 .pic_box .item .mask {
+    width: 100%;
+    height: 100%;
+    background: -webkit-linear-gradient(-45deg, #34495e 0%, #cc6055 100%);
+    background: linear-gradient(-45deg, #34495e 0%, #cc6055 100%);
+    position: absolute;
+    left: 0;
+    top: 0;
+    opacity: 0;
+    z-index: 1;
+    cursor: pointer;
+    -webkit-transition: opacity 0.35s ease;
+    transition: opacity 0.35s ease;
+}
+
+.page3 .pic_box img {
+    -webkit-transition: opacity 0.35s, -webkit-transform .35s;
+    transition: opacity 0.35s, transform .35s
+}
+
+.page3 .pic_box .item:hover img {
+    opacity: .1;
+    -webkit-transform: scale3d(2, 2, 1);
+    transform: scale3d(2, 2, 1)
+}
+
+.page3 .pic_box .item:hover .info {
+    opacity: 1;
+    -webkit-transform: scale3d(1, 1, 1);
+    transform: scale3d(1, 1, 1);
+}
+
+.page3 .pic_box .item:hover .mask {
+    opacity: .7
+}
+
+.page3 .pic_box .item1:hover img {
+    opacity: 1;
+    -webkit-transform: scale3d(1, 1, 1);
+    transform: scale3d(1, 1, 1)
+}
+
+.page4 .flow .pic_box {
+    background: url(../images/youshi_bg.png) no-repeat center center;
+}
+
+.page4 .flow .pic_box .picflow {
+    height: 495px;
+    width: 810px;
+    margin: 0 auto;
+    position: relative;
+    top: 20px;
+    color: #9E9E9E;
+    padding-top: 20px;
+}
+
+.page4 .flow .pic_box .picflow .left_part {
+    width: 450px;
+    text-align: right;
+    overflow: hidden;
+    position: relative;
+    z-index: 1;
+    float: left;
+}
+
+.page4 .flow .pic_box .picflow .left_part h2 {
+    width: 117px;
+    height: 34px;
+    line-height: 300px;
+    font-size: 18px;
+    position: absolute;
+    right: 0;
+    text-align: center;
+    background: url(../images/sljz.png) no-repeat center center;
+    overflow: hidden;
+}
+
+.page4 .flow .p_top {
+    overflow: hidden;
+}
+
+.page4 .flow .left_part ul {
+    margin-top: 40px;
+    line-height: 23px;
+}
+
+.page4 .flow .left_part ul li {
+    cursor: pointer;
+    font-size: 14px;
+    cursor: pointer;
+}
+
+.page4 .flow .left_part ul li:hover {
+    color: #fffebe;
+    font-size: 16px;
+}
+
+.page4 .flow .right_pic {
+    float: left;
+    margin-left: 32px;
+}
+
+.page4 .flow .right_pic ul {
+    line-height: 23px;
+    height: 222px;
+    overflow: hidden;
+}
+
+.page4 .flow .right_pic ul li {
+    cursor: pointer;
+    width: 301px;
+    height: 222px;
+    overflow: hidden;
+}
+
+.page4 .flow .right_pic ul li img {
+    max-width: 301px;
+    max-height: 222px;
+}
+
+.product .flow .view_pic_box {
+    height: 550px;
+    background: url(../images/bg03.png) no-repeat center center;
+    margin: 0 auto;
+    width: 896px;
+    position: relative;
+    perspective: 800px;
+    perspective-origin: 50% 50%;
+}
+
+.video-dialog {
+    background: url(../images/bg03.png) no-repeat center center !important;
+}
+
+.video-dialog iframe {
+    width: 810px !important;
+    height: 500px !important;
+    margin-top: -7px;
+    margin-left: 11px;
+}
+
+.video-dialog .layui-layer-setwin .layui-layer-close2 {
+    right: -4px;
+}
+
+.video-dialog .aui_close {
+    position: absolute;
+    right: 11px;
+    top: -4px;
+    width: 33px;
+    height: 33px;
+    margin-left: 0;
+    background: #414141 url(../images/close_big.png) no-repeat;
+    border-radius: 50%
+}
+
+.video-dialog .aui_content {
+    padding: 30px !important;
+}
+
+.contract-dialog {
+    background: url(../images/bg03.png) no-repeat center center !important;
+    width: 896px;
+}
+
+.contract-dialog iframe {
+    width: 806px !important;
+    height: 491px !important;
+    margin-top: -12px;
+    margin-left: 4px
+}
+
+.contract-dialog .aui_close {
+    position: absolute;
+    right: 12px;
+    top: -9px;
+    width: 33px;
+    height: 33px;
+    margin-left: 0;
+    background: #414141 url(../images/close_big.png) no-repeat;
+    border-radius: 50%
+}
+
+.contract-dialog .aui_content {
+    padding: 31px 37px !important;
+}
+
+.page4 .flow .brand {
+    overflow: hidden;
+    margin-top: -20px;
+    position: relative;
+}
+
+.page4 .flow .brand h2 {
+    background: url(../images/pinpai.png) no-repeat;
+    width: 277px;
+    height: 19px;
+    margin-left: 32px;
+}
+
+.page4 .picflow .p_bot {
+    overflow: hidden;
+    position: relative;
+    z-index: 1;
+    float: left;
+    padding-left: 25px;
+    padding-top: 15px;
+}
+
+.page4 .picflow .p_bot h2 {
+    width: 117px;
+    height: 34px;
+    line-height: 300px;
+    font-size: 18px;
+    background: url(../images/qyyj.png) no-repeat;
+    overflow: hidden;
+}
+
+.page4 .picflow .p_bot ul {
+    margin-top: 5px;
+    font-size: 14px;
+}
+
+.page4 .picflow .p_bot ul li {
+    line-height: 25px;
+    cursor: pointer;
+}
+
+.page4 .picflow .p_bot ul li:hover {
+    color: #fffebe;
+    font-size: 16px;
+}
+
+.contractUs {
+    position: relative;
+    width: 773px;
+    z-index: 1;
+    padding: 43px 0 0 37px;
+    background: #000;
+    height: 448px;
+    margin-left: -4px;
+}
+
+.contractUs .us_logo {
+    width: 201px;
+    height: 46px;
+    background: url(../images/us_logo.png) no-repeat;
+    float: left;
+}
+
+.contractUs .us_map {
+    width: 565px;
+    height: 329px;
+    background: url(../images/us_map.png) no-repeat;
+    float: right;
+    position: absolute;
+    right: 0;
+}
+
+.contractUs .us_tel {
+    width: 196px;
+    height: 101px;
+    background: url(../images/us_tel.png) no-repeat;
+    position: absolute;
+    left: 42px;
+    top: 123px;
+}
+
+.contractUs .serqq {
+    position: absolute;
+    left: 42px;
+    top: 270px;
+    border-bottom: solid 1px #5E5E5E;
+    padding-bottom: 18px;
+}
+
+.contractUs .serqq a {
+    float: left;
+    margin-right: 26px;
+    color: #9E9E9E
+}
+
+.contractUs .serqq a:last-child {
+    margin-right: 0;
+}
+
+.contractUs .serqq a i {
+    float: left;
+    width: 35px;
+    height: 38px;
+    background: url(../images/qq_big.png) no-repeat;
+}
+
+.contractUs .serqq a:hover {
+    color: #188DBA;
+}
+
+.contractUs .serqq a:hover i {
+    background: url(../images/qq_big_hover.png) no-repeat;
+}
+
+.contractUs .serqq a span {
+    float: left;
+    padding-left: 5px;
+    font-size: 14px;
+}
+
+.contractUs .share {
+    position: absolute;
+    top: 355px;
+    left: 41px;
+}
+
+.contractUs .share a {
+    float: left;
+    background: url(../images/us_share.png) no-repeat;
+    width: 38px;
+    height: 54px;
+    margin-right: 23px;
+    cursor: pointer;
+}
+
+.contractUs .share a.sha_title {
+    width: 42px;
+    background-position: 0 0;
+}
+
+.contractUs .share a.qq {
+    background: none;
+}
+
+.contractUs .share a.qqzone {
+    background: none;
+}
+
+.contractUs .share a.weibo {
+    background: none;
+}
+
+.contractUs .share a.weixin {
+    background-position: -60px 0;
+}
+
+.contractUs .share a.pyq {
+    background-position: -119px 0;
+}
+
+.contractUs .share a.fav {
+    background-position: -352px 0;
+}
+
+.contractUs .share a.weixin:hover {
+    background-position: -60px -73px;
+}
+
+.contractUs .share a.pyq:hover {
+    background-position: -119px -73px;
+}
+
+.contractUs .share a.fav:hover {
+    background-position: -352px -73px;
+}
+
+.contractUs .share .bdsharebuttonbox a {
+    background: none;
+    display: block;
+    width: 22px !important;
+    height: 54px !important;
+    position: absolute;
+    z-index: 2;
+    top: -7px;
+    background: url(../images/us_share.png) no-repeat;
+}
+
+.contractUs .share .bdsharebuttonbox a.bds_sqq {
+    left: 187px;
+    background-position: -177px 0;
+}
+
+.contractUs .share .bdsharebuttonbox a.bds_tsina {
+    left: 310px;
+    background-position: -294px 0;
+}
+
+.contractUs .share .bdsharebuttonbox a.bds_qzone {
+    left: 248px;
+    background-position: -235px 0;
+}
+
+.contractUs .share .bdsharebuttonbox a.bds_sqq:hover {
+    background-position: -177px -73px;
+}
+
+.contractUs .share .bdsharebuttonbox a.bds_tsina:hover {
+    background-position: -294px -73px;
+}
+
+.contractUs .share .bdsharebuttonbox a.bds_qzone:hover {
+    background-position: -235px -73px;
+}
+
+.contractUs .share a.bds_more {
+    display: none;
+}
+
+.contractUs .us_qrcode {
+    position: absolute;
+    width: 242px;
+    height: 124px;
+    right: 43px;
+    bottom: 70px;
+    color: #9E9E9E
+}
+
+.contractUs .us_qrcode span {
+    float: left;
+    width: 106px;
+    margin-top: 87px;
+    font-size: 12px;
+    text-align: right;
+    padding-right: 10px;
+}
+
+.contractUs .us_qrcode i {
+    float: left;
+    width: 124px;
+    height: 124px;
+    background: url(../images/us_qrcode.png) no-repeat;
+    cursor: pointer;
+}
+
+.contractUs .us_qrcode i:hover {
+    background: url(../images/qrcode_hover.png) no-repeat;
+}
+
+.contractUs .address {
+    height: 58px;
+    line-height: 58px;
+    overflow: hidden;
+    border-top: solid 1px #505050;
+    position: absolute;
+    bottom: 0;
+    color: #9E9E9E;
+    font-size: 14px;
+    width: 728px;
+    font-family: 宋体;
+    font-style: normal;
+}
+
+.contractUs .address .email {
+    float: left
+}
+
+.contractUs .address .ad {
+    float: right;
+}
+
+.qrcodeshare {
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, .75);
+    display: none;
+    z-index: 3
+}
+
+.qrcodeshare .qrcode {
+    width: 260px;
+    height: 338px;
+    background: url(../images/shareqrcode.jpg) no-repeat;
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    margin-left: -130px;
+    margin-top: -169px;
+    z-index: 3
+}
+
+
+/* 横向滚动
+
+------------------------------ */
+
+.scroll_horizontal {
+    position: relative;
+    width: 803px;
+    height: 76px;
+    margin-top: 10px;
+}
+
+.scroll_horizontal .box {
+    overflow: hidden;
+    position: relative;
+    width: 750px;
+    height: 76px;
+    margin: 0 auto;
+}
+
+.scroll_horizontal .list {
+    overflow: hidden;
+    width: 99999px;
+}
+
+.scroll_horizontal .list li {
+    float: left;
+    width: 121px;
+    padding-right: 5px;
+}
+
+.scroll_horizontal .list li img {
+    max-width: 121px;
+    transition: opacity .5s ease;
+}
+.scroll_horizontal .list li img:hover{
+    opacity: .6
+}
+.scroll_horizontal .prev,
+.scroll_horizontal .next {
+    position: absolute;
+    top: 50%;
+    margin-top: -10px;
+    width: 21px;
+    height: 21px;
+    background: url(../images/scroller-icon.png) no-repeat -21px -21px;
+    background-repeat: no-repeat;
+    cursor: pointer;
+}
+
+.scroll_horizontal .prev {
+    left: 2px;
+    background-position: -21px -21px;
+}
+
+.scroll_horizontal .next {
+    right: 2px;
+    background-position: -21px 0;
+}
+
+.scroll_horizontal .prev:hover {
+    background-position: 0 0;
+}
+
+.scroll_horizontal .next:hover {
+    background-position: 0 -21px;
+}
+
+.product .flow .picandnav {
+    margin-top: -268px;
+}
+
+.page2 .flow .iframebox {
+    margin: 0px;
+    left: -42px;
+    top: 0;
+}
+
+.product .flow .view_pic_box .back {
+    position: absolute;
+    background: url(../images/back.png) no-repeat;
+    text-indent: -200000px;
+    display: block;
+    width: 50px;
+    height: 25px;
+    right: 62px;
+    bottom: 70px;
+    cursor: pointer;
+}
+
+.page2 .flow .pic_box.product_cate {
+    background: url(../images/bg03.png) no-repeat center center;
+}
+
+.flow .product_cate .back {
+    position: absolute;
+    background: url(../images/back.png) no-repeat;
+    text-indent: -200000px;
+    display: block;
+    width: 50px;
+    height: 25px;
+    right: 10px;
+    bottom: 10px;
+    cursor: pointer;
+    display: none;
+}
+
+.flow .product_cate .back_left {
+    left: 10px;
+}
+
+.product .picandnav .mousewheel {
+    background: url(../images/icon1.png) no-repeat -126px -68px;
+    width: 70px;
+    height: 65px;
+    margin: 50px auto 0;
+    cursor: pointer;
+    display: none;
+}
+
+.product .picandnav .mousewheel:hover {
+    background-position: -126px 0;
+}
+
+.zoomy {
+    position: absolute;
+    display: none;
+    background-repeat: no-repeat;
+    border: 0;
+    cursor: default;
+    line-height: 100px;
+    text-align: center;
+    background-position: center;
+    background-color: #000;
+    z-index: 1000;
+}

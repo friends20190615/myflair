@@ -1,0 +1,57 @@
+@charset "utf-8";
+/* 表单CSS Document（定义fieldset、label、button、input 、select、textarea这几个标签的表现） */
+/* 按钮样式(整站通用的按钮样式) */
+.btn_gray_62{width:62px; border:0px; background:url(../../images/btnInquiry.png) no-repeat; color:#000000; height:27px; line-height:27px; text-align:center; cursor:pointer;}
+/* input样式 */
+.inp_170{border:1px solid #abacaa; width:170px; height:26px; line-height:26px;}
+.inp_135{border:1px solid #abacaa; width:135px; height:23px; line-height:23px;}
+.ipt_150{width:150px; height:19px; line-height:19px; font-size:12px; font-family:"微软雅黑", "宋体"; letter-spacing:1px;}
+.ipt_70{width:70px; height:19px; line-height:19px; font-size:12px; font-family:"微软雅黑", "宋体"; letter-spacing:1px;}
+.ipt_amount{width:90px; height:19px; line-height:19px; font-size:12px; font-family:"微软雅黑", "宋体"; letter-spacing:1px; text-align:right;}
+.ipt_date{width:90px; height:19px; line-height:19px; font-size:12px;}
+.ipt_50{width:50px; height:19px; line-height:19px; font-size:12px;}
+.ipt_300{width:300px; height:19px; line-height:19px; font-size:12px; font-family:"微软雅黑", "宋体"; letter-spacing:1px;}
+.ipt_800{width:800px; height:19px; line-height:19px; font-size:12px; font-family:"微软雅黑", "宋体"; letter-spacing:1px;}
+select{width:153px;height:21px; line-height:21px;}
+/* 按钮样式 */
+.orange_btn_100, .orange_btn_120, .orange_btn_80{width:100px; height:30px; color:#FFF; font-size:14px; font-weight:bold; overflow:hidden; border:0; line-height:30px; text-align:center; background:url(../../images/btn_orange_100.png) no-repeat; margin-right:25px;cursor:pointer;}
+.orange_btn_120{width:140px;background:url(../../images/btn_orange_120.png) no-repeat; }
+.orange_btn_80{width:80px;background:url(../../images/btn_orange_120.png) no-repeat; height:24px;line-height:24px;}
+.blue_btn_bg{ padding:0 5px;*+padding:0px 0px 5px 0px;height:24px;line-height:24px;font-weight:900; overflow:hidden; text-align:center; margin-right:2px; border:1px solid #0784d4; background:url(../../images/blue_btn_bg.jpg) repeat-x #35b0ee; color:#fff; cursor:pointer;}
+/* 搜索条件表格样式 */
+.tab_inquiry{width:100%; font-size:12px; border:1px solid #CCC;background-color: #F7F7F7;}
+.tab_inquiry th{ font-weight:normal; white-space:nowrap; text-align:right; width:150px; height:35px; line-height:35px; padding:0 5px; color:#333;}
+.tab_inquiry td{height:35px; line-height:35px; white-space:nowrap; padding-right:6px;}
+/* 列表样式 */
+.tab_list{ border:1px solid #d6d6d6; border-bottom:none; background:#FFF; border-collapse:inherit;}
+.tab_listOperating{background:url(../../images/Inquiry_titleBg.gif) repeat-x; height:32px; line-height:32px;}
+.tab_listOperating a{color:#000;}
+.tab_listOperating a:hover{ text-decoration:none;}
+.tab_list th{height:32px; line-height:32px; border-top:2px solid #2092D6; background: url(../../images/tab_list_th_bg.gif) repeat-x; color:#333; white-space:nowrap; text-align:left; padding:0px 6px;}
+.tab_list td{ line-height:29px; border-bottom:1px solid #dfdfdf; border-top:1px solid #FFF; white-space:nowrap; }
+.tab_list td{padding:0px 10px;}
+.tab_list a.select{color:#333;}
+.tab_list a:hover.select{ text-decoration:underline;}
+.bg_gray_f1{background-color:#f1f1f1;}
+.tab_list_td_bg{background-color:#d8eefe;}/* 背景色 */
+/*  详情页面的table */
+.tab_information{font-size:12px; background-color:#FFF; border:6px solid #FFF;}
+.tab_information th{ font-weight:normal; white-space:nowrap; text-align:right; height:30px; line-height:30px;padding:0 10px; color:#000;border:1px solid #FFF; background-color: #eee;}
+.tab_information td{height:30px; line-height:30px; white-space:nowrap; padding:0 6px 0 3px;}
+/* 详细信息的列表样式 */
+.tab_list_infor{ width:100%; font-size:12px;}
+.tab_list_infor th{height:32px; line-height:32px;border-top:1px solid #6CF; background: url(../../images/tab_list_th_bg.gif) repeat-x; color:#333; white-space:nowrap; text-align:center; padding:0px 6px;}
+.tab_list_infor td{height:30px;line-height:20px; border-bottom:1px dashed #999999; padding:0 10px;}
+.tab_list_infor1{ width:100%; font-size:12px; border-bottom:1px solid #E6E6E6;}
+.tab_list_infor1 th{height:32px; line-height:32px;border-top:1px solid #6CF; background: url(../../images/tab_list_th_bg.gif) repeat-x; color:#666; white-space:nowrap; text-align:center; padding:0px 6px;}
+.tab_list_infor1 td{line-height:27px; padding:0 10px; white-space:nowrap; text-align:center; color:#666;}
+
+.tab_wai{border:1px solid #999; border-right-width:3px;border-bottom-width:2px;}
+.tab_wai td,.tab_wai th{ line-height:26px;}
+.tab_nai td{text-align:center; border-bottom:1px solid #999; border-left:1px solid #999; color:#5F5F5F;}
+.tab_nai th{background-color:#E7E7E7 ;text-align:center; color:#333;border-bottom:1px solid #999; border-left:1px solid #999; font-weight:normal;}
+
+.tab_lei{border-left:1px solid #dfdfdf;}
+.tab_lei td{ line-height:29px; border-bottom:1px solid #dfdfdf; border-top:1px solid #FFF; text-align:center;border-right:1px solid #dfdfdf;}
+.tab_lei th{height:32px; line-height:32px; background: url(../../images/tab_list_th_bg.gif) repeat-x; color:#333; white-space:nowrap; text-align:center; padding:0px 6px;border-right:1px solid #dfdfdf;}
+.tab_pay td{padding:10px 10px 5px 0px;}

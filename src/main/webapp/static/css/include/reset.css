@@ -1,0 +1,12 @@
+@charset "utf-8";
+/* 格式化CSS Document（重置部分样式） */
+body{font-size:12px;font-family:Arial,"宋体"; background:#FFF; margin:0px; padding:0px; }
+body, div, dl, dt, dd, ul, ol, li, h1, h2, h3, h4, h5, h6, pre, code, form, fieldset, legend, input, button, textarea, p, blockquote, table, th, td {
+	margin:0; padding:0;line-height: 1.2;}离 */
+input{text-indent:5px;}
+caption, th {text-align:inherit;}
+fieldset, img{border:0;}
+ul, ol{list-style:none;}
+h1, h2, h3, h5, h6 {font-size:100%;font-weight:normal;}
+a{text-decoration:none;}
+a:hover{text-decoration:underline;}

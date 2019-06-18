@@ -1,0 +1,31 @@
+@charset "utf-8";
+html,body{margin:0;padding:0;}
+body.hrgray{background-color:#f5f5f5;}
+.ar{text-align:right;}
+.ac{text-align:center;}
+.hr-banner-soc{height:380px;background:url(http://image.zuchecdn.com/ucarinc/newindextitle.jpg?v=20160606) no-repeat center;min-width:1200px;width:100%;margin:0 auto;overflow:hidden;}
+.ovfhd{overflow:hidden;}
+.hr-main{width:1200px;margin:0 auto;position:relative;}
+.hr-index-con{min-height:550px;padding-bottom:100px;}
+.soc-pos{width:1200px;margin-top:60px;background-color:#fff;min-height:450px;}
+.soc-pos dt{padding:0 30px 0 25px;background-color:#fabe00;height:60px;line-height:60px;color:#fff;font-size:18px;overflow:hidden;}
+.soc-pos dd{padding:0 30px 0 25px;background-color:#fff;height:80px;line-height:80px;font-size:16px;color:#60606c;}
+.soc-pos dd i{border-bottom:1px solid #dadadf;height:79px;}
+.soc-pos dt i,.soc-pos dd i{font-style:normal;display:inline-block;float:left;}
+.soc-pos a{color:#60606c;}
+.w1{width:280px;}
+.w2{width:160px;}
+.w3{width:200px;}
+.w4{width:160px;}
+.w5{width:170px;}
+.w6{width:155px;padding-right:20px;}
+.gy9{color:#93939e;}
+
+.pagediv{overflow:hidden;zoom:1;text-align:center;padding:20px 0 35px;border-bottom:1px solid #dadadf;background-color:#fff;}
+.pagediv a{display: inline-block;line-height: 28px;border: 1px solid #e9ebee;color: #93939e;min-width: 29px;text-align: center;cursor: pointer;vertical-align: middle;margin-left: -1px;}
+.pagediv a{font-family: Arial,Helvetica,sans-serif}
+.pagediv a.active_page,.pagediv a:hover{border-bottom: solid 1px #fac10a;border-top: solid 1px #fac10a;color: #fff;text-decoration: none;background-color: #fac10a}
+.pagediv a.pg-l,.sz_page a.pg-l:hover{min-width: 58px}
+
+
+

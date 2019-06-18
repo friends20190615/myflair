@@ -1,0 +1,7 @@
+@charset "utf-8";
+/* CSS Document */
+/* 引入模块css */
+@import url("include/reset.css");	/* 格式化css */
+@import url("include/type.css");    /* 基础通用css */
+@import url("include/form.css");	/* 表单css */
+@import url("include/module.css");

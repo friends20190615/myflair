@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.myflair.front.dao.PullNewMemberDao">
+    <select id="getByParams" parameterType="java.util.HashMap" resultType="PullNewMember">
+          select id,be_invite_mobile beInviteMobile,invite_mobile inviteMobile,
+          invite_stauts inviteStatus,order_id orderId,invite_time inviteTime,
+          first_order_time firstOrderTime,return_ticket_status returnTicketStatus,
+          return_ticket_time returnTicketTime from t_pull_newmember_log
+          where be_invite_mobile= #{beInviteMobile}
+
+    </select>
+
+    <select id="getOrderInfoByParams" resultType="OrderInfo" parameterType="java.util.HashMap">
+         SELECT  id,mobile,stauts as stats,yz_order_no orderNo from t_order where  mobile = #{beInviteMobile} and stauts !=8 limit 1
+    </select>
+
+    <select id="getMobileFannsByParams" resultType="MobileFanns" parameterType="java.util.HashMap">
+           select id, mobile,fans_id as fansId,create_time as createTime,modify_time as modifyTime
+        from t_mobile_fans where mobile =  #{beInviteMobile}
+    </select>
+
+    <select id="insertPullNewMem" parameterType="PullNewMember">
+        insert into t_pull_newmember_log(be_invite_mobile,invite_mobile,invite_stauts,order_id,invite_time,
+        first_order_time,return_ticket_status,return_ticket_time,be_invite_return_ticket_status,
+        be_invite_return_ticket_time)
+        VALUES (#{beInviteMobile},#{inviteMobile},1,#{orderId},now(),#{firstOrderTime},0,
+        #{returnTicketTime},#{beInviteReturnTicketStatus},#{beInviteReturnTicketTime})
+    </select>
+
+    <select id="getBimListByInviteMobile" parameterType="java.util.HashMap" resultType="PullNewMember">
+        select be_invite_mobile beInviteMobile,invite_mobile inviteMobile from t_pull_newmember_log where be_invite_return_ticket_status =1 and invite_mobile = #{mobile}
+    </select>
+</mapper>

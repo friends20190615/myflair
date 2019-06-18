@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.myflair.admin.lachine.dao.LachineDao">
+    <select id="queryList" parameterType="java.util.HashMap" resultType="PullNewMember">
+        select id,be_invite_mobile beInviteMobile,invite_mobile inviteMobile,
+        invite_stauts inviteStatus,order_id orderId,invite_time inviteTime,
+        first_order_time firstOrderTime,return_ticket_status returnTicketStatus,
+        return_ticket_time returnTicketTime, be_invite_return_ticket_status beInviteReturnTicketStatus,
+        be_invite_return_ticket_time beInviteReturnTicketTime from t_pull_newmember_log
+        where 1=1
+        <if test="beInviteMobile!=null">
+            and be_invite_mobile= #{beInviteMobile}
+        </if>
+        <if test="inviteMobile!=null">
+            and invite_mobile= #{inviteMobile}
+        </if>
+        <if test="returnTicketStatus!=null">
+            and return_ticket_status= #{returnTicketStatus}
+        </if>
+        order by be_invite_return_ticket_time limit #{start},#{pageSize}
+    </select>
+
+    <select id="queryCount" resultType="int" parameterType="java.util.HashMap">
+        select  count(id) from t_pull_newmember_log
+        where 1=1
+        <if test="beInviteMobile!=null">
+            and be_invite_mobile= #{beInviteMobile}
+        </if>
+        <if test="inviteMobile!=null">
+            and invite_mobile= #{inviteMobile}
+        </if>
+        <if test="returnTicketStatus!=null">
+            and return_ticket_status= #{returnTicketStatus}
+        </if>
+    </select>
+</mapper>

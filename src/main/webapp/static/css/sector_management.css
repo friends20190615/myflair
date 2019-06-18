@@ -1,0 +1,17 @@
+@charset "utf-8";
+/* CSS Document */
+/* 部门CSS */
+#sector_management_id{position:fixed;_position:absolute;width:100%;}
+.sector_management{background: url(../images/sector_management_bg.gif) #f1f1f1 repeat-x;}
+.gray_bg_f1{background-color:#f1f1f1;}
+.sector_management_title{background:url(../images/sector_management_title.png) no-repeat; height:51px;}
+.sector_management_line{width:257px; background:url(../images/sector_management_line_bg.gif) repeat-y right #e5f0f6;}
+.sector_management_operating{padding-top:6px;}
+.sector_management_operating a{color:#b2b2b2;}
+.sector_management_operating a:hover{ text-decoration:none;}
+.sector_management_bg{ background:url(../images/sector_management_linee.png) no-repeat; height:900px;}
+.sector_management_infor{ border:2px solid #CCC; background-color:#FFF; position:absolute;}
+.sector_management_infor th{font-weight:normal; text-align:right;padding:4px 5px;}
+.sector_management_infor td{ text-align:left;padding-right:10px;}
+/* 员工信息css */
+

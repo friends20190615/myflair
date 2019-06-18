@@ -1,0 +1,131 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.myflair.third.dao.YouZanDataDao">
+
+    <select id="getCountByOrderId" resultType="int" parameterType="java.util.HashMap" >
+      select count(*) from t_order where yz_order_id = #{orderId}
+   </select>
+
+
+    <select id="getCountByOrderNo" resultType="int" parameterType="java.util.HashMap" >
+        select count(*) from t_order where yz_order_no = #{orderNo}
+    </select>
+
+    <insert id="insertOrderInfos" parameterType="OrderInfo" >
+        <selectKey resultType="java.lang.Integer" order="AFTER" keyProperty="id">
+            SELECT LAST_INSERT_ID() AS id
+        </selectKey>
+      INSERT INTO t_order (mobile,stauts,yz_order_id,yz_order_no,create_time)
+      VALUES (#{mobile},#{stats},#{orderId},#{orderNo},now())
+    </insert>
+
+    <insert id="insertOrderHistor" parameterType="OrderHistory">
+      INSERT INTO t_order_h(stauts,order_id,create_time) VALUES
+      (#{stats},#{orderId},now())
+    </insert>
+
+    <select id="getOrderDetail" parameterType="java.util.HashMap" resultType="OrderInfo">
+        SELECT  id,mobile,stauts as stats,yz_order_no orderNo,create_time createTime
+         from t_order where  yz_order_no = #{orderNo}
+    </select>
+
+    <update id="updateOrderWlStats" parameterType="java.util.HashMap">
+         UPDATE t_order set wl_stat=#{wlStat},wl_update_time=#{wlUpdateTime} WHERE yz_order_no = #{orderNo}
+    </update>
+
+    <update id="updateOrderInfos" parameterType="OrderInfo">
+        UPDATE t_order set mobile=#{mobile} where id = #{id}
+    </update>
+
+    <update id="updateOrderInfoStatus" parameterType="OrderInfo">
+        UPDATE t_order set stauts=#{stats},last_modify_time= now() where id = #{id}
+    </update>
+
+    <insert id="insertMfInfos" parameterType="MobileFanns"  useGeneratedKeys="true" keyProperty="id" keyColumn="id">
+        insert INTO t_mobile_fans (mobile,fans_id,create_time,modify_time)
+        VALUES (#{mobile},#{fansId},now(),now())
+    </insert>
+
+    <select id="getMfInfoByOrderInfo" parameterType="OrderInfo" resultType="MobileFanns">
+        select id, mobile,fans_id as fansId,create_time as createTime,modify_time ad modifyTime
+        from t_mobile_fans where fans_id =  #{fansiId}
+    </select>
+
+    <update id="updateOrderHistoryStatus" parameterType="OrderHistory">
+        UPDATE t_order_h set stauts = #stats# where order_id=#{orderId}
+    </update>
+
+    <select id="getBeInviteMember" parameterType="OrderInfo" resultType="PullNewMember">
+        select id,be_invite_mobile beInviteMobile,invite_mobile inviteMobile,
+          invite_stauts inviteStatus,order_id orderId,invite_time inviteTime,
+          first_order_time firstOrderTime,return_ticket_status returnTicketStatus,
+          return_ticket_time returnTicketTime from t_pull_newmember_log
+          where be_invite_mobile= #{mobile} and return_ticket_status = 0 and order_id is null
+    </select>
+
+    <select id="getInviteFans" parameterType="PullNewMember" resultType="MobileFanns">
+        select mobile,fans_id as fansId,create_time as createTime,modify_time ad modifyTime
+        from t_mobile_fans where mobile =  #{inviteMobile}
+    </select>
+
+    <update id="updatePullNewMember" parameterType="PullNewMember">
+        update t_pull_newmember_log set return_ticket_status=#{returnTicketStatus},
+         invite_stauts=#{inviteStatus},order_id = #{orderId}, first_order_time =#{firstOrderTime},
+         return_ticket_time=#{returnTicketTime}
+         where id=#{id}
+    </update>
+
+    <update id="updatePullNewMemberInviteMobileStatus" parameterType="PullNewMember">
+        update t_pull_newmember_log set return_ticket_status=#{returnTicketStatus},
+        invite_stauts=#{inviteStatus},
+        return_ticket_time=#{returnTicketTime}
+        where id=#{id}
+    </update>
+
+
+    <insert id="insertCouponInfo" parameterType="CouponInfo" >
+        insert into t_coupon(coupon_id,title,coupon_condition,reduce_value,use_start_time,
+        use_end_time,STATUS,mobile_fansid,create_emp,create_time,modify_emp,modify_time,remark,use_order_id,mobile) VALUES
+        (#{couponId},#{title},#{couponCondition},#{reduceValue},#{useStartTime},#{useEndTime},#{status},
+        #{mobileFansId},#{createEmp},now(),#{modifyEmp},now(),#{remark},#{useOrderId},#{mobile})
+    </insert>
+
+    <update id="updateBeInviteMember" parameterType="PullNewMember">
+         update t_pull_newmember_log set be_invite_return_ticket_status=#{beInviteReturnTicketStatus},
+         be_invite_return_ticket_time=#{beInviteReturnTicketTime}
+         where be_invite_mobile=#{beInviteMobile} AND id = #{id}
+    </update>
+
+    <select id="getBeInviteMemberAndNoReturnTicket" parameterType="java.util.HashMap" resultType="PullNewMember">
+         select id,be_invite_mobile beInviteMobile,invite_mobile inviteMobile,
+          invite_stauts inviteStatus,order_id orderId,invite_time inviteTime,
+          first_order_time firstOrderTime,return_ticket_status returnTicketStatus,
+          return_ticket_time returnTicketTime from t_pull_newmember_log
+          where be_invite_mobile= #{beInviteMobile} and be_invite_return_ticket_status = 0
+    </select>
+
+    <select id="getNotReturnCouponInviteMobiles"  resultType="PullNewMember">
+        select tpnl.id as id,tpnl.order_id as orderId,tpnl.invite_mobile as inviteMobile from t_pull_newmember_log tpnl
+        inner join t_order o on tpnl.order_id = o.id
+        where tpnl.return_ticket_status!=1 and o.stauts = 7 and DATEDIFF(now(),o.last_modify_time) >=7
+		union all
+		select tpnl.id as id,tpnl.order_id as orderId,tpnl.invite_mobile as inviteMobile from t_pull_newmember_log tpnl
+        inner join t_order o on tpnl.order_id = o.id
+        where tpnl.return_ticket_status!=1 and o.stauts = 6 and o.wl_stat = 3 and DATEDIFF(now(),o.wl_update_time) >=7
+    </select>
+    <!--(unix_timestamp(now())-unix_timestamp(o.last_modify_time))/60 >10-->
+    <!-- -->
+
+    <select id="getRegistCouponByMobile" resultType="int" parameterType="java.util.HashMap">
+        select count(id) from t_coupon where mobile =#{mobile} and status =3
+    </select>
+
+    <insert id="insertIntegralInfo" parameterType="IntegralInfo">
+        insert into t_integral (mobile,title,integral_value,create_time,remark,use_order_id) VALUES
+        (#{mobile},#{title},#{integralValue},#{createTime},#{remark},#{orderId})
+
+    </insert>
+
+
+</mapper>

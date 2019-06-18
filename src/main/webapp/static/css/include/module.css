@@ -1,0 +1,110 @@
+@charset "utf-8";
+/* CSS Document */
+/* ========== 标题目录 ========== */
+.brumbtext{background:url(../../images/brumbtext_bg.gif) repeat-x; height:35px; line-height:35px;}
+.brumbtext h1{
+	height:35px;
+	line-height:35px;
+	padding-left:55px;
+	background: url(../../images/brumbtext.png) no-repeat;
+}
+/* ========== 翻页 ========== */
+
+.page-nav{
+	text-align:center;
+	width:650px;
+	margin:0 auto;
+}
+
+.page-nav ol li{
+	display:block;
+	float:left;
+	margin-left:10px;
+	line-height:22px;
+	width:22px;
+	text-align:center;
+}
+
+.page-nav ol li a{
+	height:22px;
+	line-height:22px;
+	border:1px #CDCDCD solid;
+	display:block;
+	color:#333;
+}
+.page-nav ol li a.cur,
+.page-nav ol li a:hover{
+	background:#0196CE;
+	text-decoration:none;
+	color:#FFFFFF;
+}
+
+.page-nav ol li.first,
+.page-nav ol li.last{
+	width:60px;
+}
+
+.page-nav ol li.first a{
+	padding-left:15px;
+	background:url(../../images/icon_m.png) 0 0 no-repeat;
+}
+
+.page-nav ol li.first a.cur,
+.page-nav ol li.first a:hover{
+	background:url(../../images/icon_m.png) 0 -20px no-repeat;
+	color:#0196CE;
+}
+
+.page-nav ol li.last a{
+	padding-right:15px;
+	background:url(../../images/icon_m.png) right -40px no-repeat;
+}
+
+.page-nav ol li.last a.cur,
+.page-nav ol li.last a:hover{
+	background:url(../../images/icon_m.png) right -60px no-repeat;
+	color:#0196CE;
+}
+/* ========== 订单详情 ========== */
+.order_information{min-width:800px;}
+/* ========== 订单编号、 ========== */
+.note{background: url(../../images/note.png) no-repeat #ffffe1;border:1px solid #FADFB2;padding:10px 5px 10px 38px;zoom:1; letter-spacing:2px;}
+/* tab标签页 */
+.gBorderBtm{ height:29px; border-bottom:1px solid #c5c5c5;}
+.customerTypeTabs{ padding-left:20px; position:relative; margin-top:-30px; zoom:1; overflow:hidden;}
+.customerTypeTabs li{ float:left; margin-right:3px; background:url(../../images/query_li1.gif) no-repeat 0 -38px transparent;width:116px;height:30px;line-height:30px;color:#1B74AA;
+text-align:center; font-size:14px; cursor:pointer; font-weight:bold;}
+.customerTypeTabs .cur{background:url(../../images/query_li1.gif) no-repeat 0 0 transparent; height:30px; border-bottom:0;}
+.TabsContents{ display:none;}
+.TabsContents.cur{ display:block;}
+.selectContents{ display:none;}
+.selectContents.cur{ display:block;}
+/* ========== 优惠活动连接样式 ========== */
+.promotions_a a{color:#666;}
+/* ========== 订单详情固定div样式 ========== */
+#order_information_fixed {position:fixed;_position:absolute;width:100%;}
+/* ========== 导出 ========== */
+.text_dec_un{text-decoration:underline;}
+/* 配置车型 、核算、身份验证、机场信息*/
+#configurationModels h3, #costingModels h3, #authenticationModels h3, #airportModels h3{ text-indent:30px; margin:8px 0 5px 0;}
+.u-rolesPane,.rolesPane{ border:1px solid #E4E5E4; background:#FAFBFA; margin:10px; padding:10px;}
+.u-rolesPane table,.rolesPane table{ width:100%; margin:0 auto;}
+.u-rolesPane table td,.u-rolesPane table th{ line-height:30px;}
+.rolesPane table td,.rolesPane table th{ line-height:24px;}
+.u-rolesPane .u-topTr th{ border-bottom:1px solid #E4E5E4;}
+/* 门店详情鼠标划过样式 */
+.stores_infor{border:1px solid #09F; max-width:500px; width:auto!important; width:auto; padding:10px; white-space:nowrap; position:absolute; left:27%; background-color:#E1F0FF; color:#666;}
+
+.bd_top_df{border-top:1px solid #dfdfdf;}
+.bd_top_ff{border-top:1px solid #ffffff;}
+.bd_bm_df{border-bottom:1px solid #dfdfdf;}
+.bd_bm_ff{border-bottom:1px solid #ffffff;}
+/*  */
+.ellipsis{
+    overflow:hidden;
+    text-overflow:ellipsis;
+    white-space:nowrap;
+}
+
+
+.up-contentBody{ overflow-y:auto; overflow-x:hidden; height:390px; width:797px;}

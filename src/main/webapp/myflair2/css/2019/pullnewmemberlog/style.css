@@ -1,0 +1,76 @@
+@charset "utf-8";*{margin:0;padding:0;-webkit-tap-highlight-color:transparent;outline:0;border:none;box-sizing:border-box}
+html{font-size:150%;width:100%;height:auto}
+body{max-width:500px;min-width:320px;width:100%;margin:0 auto;font-family:"Microsoft YaHei",Arial,"Lucida Grande",Verdana;color:#878787;-webkit-touch-callout:inherit;-webkit-user-select:auto;background-color:#fff}
+h1,h2,h3,h4,h5{font-weight:400;font-family:"Microsoft YaHei",Arial,"Lucida Grande",Verdana;font-size:100%}
+a{color:#878787;text-decoration:none;-webkit-tap-highlight-color:transparent}
+a:hover{text-decoration:none}
+button,input,select,textarea{font-size:100%;font-family:"Microsoft YaHei",Arial,"Lucida Grande",Verdana;margin:0;padding:0;outline:0}
+input,textarea{resize:none;outline:0}
+textarea{resize:none;-webkit-appearance:none}
+li,ol,ul{list-style:none}
+em{font-style:normal}
+article,aside,section{display:block}
+img{width:100%;vertical-align:middle}
+.mf_pnmb_wrap{position:relative}
+.mobile_wrap img.logo{width:14%;position:absolute;left:3%;top:1%}
+.mobile_wrap .pt{position:relative;z-index:10;margin-top:-7.5rem}
+.mobile_wrap .w_wrap{width:93%;margin:0 auto;padding-bottom:1.3rem;-moz-border-radius:2px;-webkit-border-radius:2px;border-radius:2px;-moz-box-shadow:0 0 .9rem #e4e4e4;-webkit-box-shadow:0 0 .9rem #e4e4e4;box-shadow:0 0 .9rem #e4e4e4;background-color:#fff}
+.mobile_wrap ul{padding-bottom:1.5rem}
+.mobile_wrap ul li{display:block;width:72%;margin:0 auto;padding-bottom:1rem}
+.mobile_wrap ul li a,.mobile_wrap ul li input{width:100%;height:3.1rem;text-align:center;-moz-border-radius:2px;-webkit-border-radius:2px;border-radius:2px}
+.mobile_wrap ul li input{border:1px solid #476596;color:#333;font-size:1.1rem;letter-spacing:2px;background-color:#fff}
+.mobile_wrap ul li input::-webkit-input-placeholder{text-align:center;color:#c8c8c8}
+.mobile_wrap ul li a{display:block;border:1px solid #dedbdd;font-weight:700;color:#b8b8b8;font-size:1.1rem;letter-spacing:2px;background-color:#dedbdd;line-height:3.1rem}
+.mobile_wrap ul li a em{font-size:1.2rem;font-family:"Microsoft YaHei";letter-spacing:1px}
+.mobile_wrap ul li a.blue{border-color:#002a6e;background-color:#002a6e;color:#fff}
+.mobile_wrap p{text-align:center;color:#232323;font-family:"Microsoft YaHei";font-size:1.2rem;line-height:1.2rem;display:block}
+.mobile_wrap .blue_f{color:#002a6e;font-size:1.6rem;line-height:2.6rem;padding:1rem 0 1rem 0}
+.mobile_wrap .blue_f::after{content:"";display:block;width:1.5rem;height:1rem;vertical-align:top;margin:0 auto;border-bottom:2px solid #002a6e;box-sizing:border-box}
+.mobile_wrap p.pt1{padding-top:1.6rem}
+.mobile_wrap p.small{font-size:.83rem;font-weight:400}
+
+.friend_list_wrap dl,.rule_wrap dl{width:90%;margin:0 auto}
+.friend_list_wrap dt,.rule_wrap dt{position:relative;text-align:center;width:36%;margin:0 auto;padding:2rem 0 1.6rem 0}
+.friend_list_wrap dt span,.rule_wrap dt span{display:block;font-size:1.2rem;line-height:1.5rem;height:1.5rem;color:#000}
+.friend_list_wrap dt span:after,.friend_list_wrap dt span:before,.rule_wrap dt span:after,.rule_wrap dt span:before{background:#aaa;content:"";height:2px;position:absolute;top:52%;width:15%}
+.friend_list_wrap dt span:before,.rule_wrap dt span:before{left:0}
+.friend_list_wrap dt span:after,.rule_wrap dt span:after{right:0}
+.rule_wrap dd ul{padding-left:1rem;}
+.rule_wrap dd li{font-size:.9rem;color:#646464;line-height:1.6rem;padding-bottom:.6rem;padding-left:0.2rem;list-style-type:decimal; }
+.rule_wrap dd li span{color:#002a64;font-weight: bold;}
+.friend_list_wrap{background-color:#f7f7f7;position:absolute;width:100%;left:0;bottom:0;padding-bottom:1.5rem;z-index:30}
+.friend_list_wrap dl.rule_list_f{height:4rem;overflow-y:auto}
+.friend_list_wrap dt{width:65%;padding:0 0 1rem 0}
+.friend_list_wrap dt span{font-size:1.1rem}
+.friend_list_wrap dt span:after,.friend_list_wrap dt span:before{width:9%;top:23%}
+.friend_list_wrap dt em{color:#890912}
+.friend_list_wrap dd{display:-webkit-box;display:-webkit-flex;display:-ms-flexbox;display:flex;-webkit-box-pack:justify;-webkit-justify-content:space-between;-ms-flex-pack:justify;justify-content:space-between;border-bottom:1px solid #cecece;height:2rem}
+.friend_list_wrap dd span{display:block;line-height:2rem;font-size:1rem}
+.friend_list_wrap dd span.l-w{text-align:left;color:#878787;padding-left:5%;width:45%}
+.friend_list_wrap dd span.r-w{text-align:right;color:#646464;padding-right:5%;width:55%}
+.friend_list_wrap .updown{display:block;text-align:center;height:2rem}
+.friend_list_wrap .updown i{display:inline-block;width:0;height:0;border-width:.6rem;border-style:solid;vertical-align:top;border-color:transparent transparent #c1c1c1 transparent}
+.friend_list_wrap.more{position:fixed}
+.friend_list_wrap.more .updown i{border-color:#c1c1c1 transparent transparent transparent;margin-top:.6rem}
+.pop-up-wrap{z-index:31}
+.share_wrap{text-align:right}
+.share_wrap img{width:100%;}
+.pop-save_wrap{position:fixed;width:100%;height:100%;top:0;left:0;z-index: 32;}
+.pop-save_wrap img{width:100%;vertical-align: middle;}
+.pop-save_wrap .shade{position:relative;max-width:500px;width:100%;height:100%;margin:0 auto;background:rgba(0,0,0,.5);}
+.pop-save_wrap ul{position: absolute;width:60%;top:20%;left:20%;background-color: #fff;text-align: center;color: #000;font-size: 0.9rem;line-height: 1.4rem;font-weight: 700;-moz-border-radius: 3px;-webkit-border-radius: 3px;border-radius: 3px;padding-bottom:1rem;}
+.pop-save_wrap ul .save_btn{width: 66%;height: 1.6rem;border: 1px solid #002a6e;color: #fff;font-size:.85rem;letter-spacing: 2px;background-color: #000;-moz-border-radius: 1.6rem;-webkit-border-radius: 1.6rem;border-radius: 1.6rem;}
+.pop-save_wrap ul li{padding-bottom:.8rem;padding-top:.8rem;}
+.pop-save_wrap .close{display: block;width: 9%;position: absolute;left:45.5%;top:60%;}
+@media only screen and (min-width:320px){html{font-size:75%!important}
+}
+@media only screen and (min-width:360px) and (max-width:374px){html{font-size:84%!important}
+}
+@media only screen and (min-width:375px){html{font-size:87.89%!important}
+}
+@media only screen and (min-width:412px){html{font-size:97%!important}
+}
+@media only screen and (min-width:414px){html{font-size:97.03%!important}
+}
+@media only screen and (min-width:641px){html{font-size:125%!important}
+}

@@ -1,0 +1,87 @@
+@charset "utf-8";
+/* 基本通用CSS Document */
+/* 字体CSS */
+.f12{font-size:12px;} /* 12号字体 */
+.f14{font-size:14px;} /* 14号字体 */
+.f16{font-size:16px;} /* 16号字体 */
+.bold{font-weight:bold;} /* 字体加粗 */
+.font_normal{font-weight:normal;} /* 字体变细 */
+.font_family{font-family: "黑体", "微软雅黑", "宋体";}
+/* 颜色CSS */
+.white{color:#FFF;} /* 白色 */
+.black{color:#000;} /* 黑色 */
+.red{color:#F00;} /* 红色 */
+.blue{color:#0032aa;}/* 蓝色 */
+.orange{color:#F60;} /* 橘色 */
+.blue{color:#0032aa;} /* 蓝色 */
+.gray{color:#999;} /* 灰色 */
+.gray_666{color:#666;} /* 666值灰色 */
+.gray_555{color:#555555}/* 555值灰色 */
+.gray_6B0B3B2{color:#B0B3B2;}
+.bg_white{background:#FFF;}  /* 白色背景色 */
+.bg_gray_ccc{background:#CCC;}  /* 灰色背景色，值为ccc */
+.yellow_f{color:#febd0e;}
+.yellow_f1{color:#f08300;}
+.green{color:#008000;}
+/* 常用的内边距属性 */
+.p10{padding:10px;} /* 上下左右均为10像素 */
+.p20{padding:20px;}
+.p10_0{padding:10px 0;} /* 上下10左右0 */
+.p20_0{padding:20px 0;} /* 上下20左右0 */
+.p0_10{padding:0 10px;} /* 上下0左右10 */
+.pt5{padding-top:5px;}
+.pt10{padding-top:10px;}
+.pt15{padding-top:15px;}
+.pt20{padding-top:20px;}
+.pb05{padding-bottom:5px;}
+.pt07{padding-top:7px;}
+.pb10{padding-bottom:10px;}
+.pb15{padding-bottom:15px;}
+.pb20{padding-bottom:20px;}
+.pl10{padding-left:10px;}
+.pl20{padding-left:20px;}
+.pr10{padding-right:10px;}
+.pr30{padding-right:30px;}
+.pr7{padding-right:7px;}
+/* 常用的外边距属性 */
+.m0_auto{margin:0 auto;}
+.m10_auto{margin:10px auto;}
+.m10{margin:10px;}
+.m20{margin:20px;}
+.m10_0{margin:10px 0;}
+.m20_0{margin:20px 0;}
+.ml10{margin-left:10px;}
+.ml20{margin-left:20px;}
+/* 行高 */
+.line_h20{line-height:20px;}
+.line_h24{line-height:24px;}
+/*间距*/
+.height10{height:10px; font-size:1px;}
+.height20{height:20px; font-size:12px;}
+.height30{height:30px; font-size:12px;}
+.height40{height:40px; font-size:12px;}
+/* 常用其他属性 */
+.clearfix{overflow:hidden; zoom:1;}
+.clear{clear:both;}
+.ac{text-align:center;}
+.al{text-align:left;}
+.ar{text-align:right;}
+.fr{float:right;}
+.fl{float:left;}
+.pointer{cursor:pointer;}
+.d_block{display:block;}
+.d_none{display:none;}
+/* 链接颜色属性 */
+.a1{color:#fdbc11;}
+.decoration1{text-decoration:underline;}
+/* 段落 */
+.aunder{color:#2b388b; text-decoration:underline;}
+.bg_gray_ED{background-color:#E0E0E0;}/* 背景色 */
+/* 后添加 */
+.bg_gray_f4{background-color:#F4F4F4;}/* 背景色 */
+.tab_list_td_bg{background-color:#d8eefe;}/* 背景色 */
+.bg_gray_ED{background-color:#E0E0E0;}/* 背景色 */
+.p5{padding:5px;}
+.p2{padding:2px;}
+.pr30{padding-right:30px;}
+.mt10{ margin-top:10px;}
