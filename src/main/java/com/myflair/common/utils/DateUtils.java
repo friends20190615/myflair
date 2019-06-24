@@ -142,10 +142,10 @@ public class DateUtils {
      * @param p_date util.Date日期
      * @return int 年份
      */
-    public static int getYearOfDate(java.util.Date p_date) {
-        java.util.Calendar c = java.util.Calendar.getInstance();
+    public static int getYearOfDate(Date p_date) {
+        Calendar c = Calendar.getInstance();
         c.setTime(p_date);
-        return c.get(java.util.Calendar.YEAR);
+        return c.get(Calendar.YEAR);
     }
 
     /**
@@ -166,10 +166,10 @@ public class DateUtils {
      * @return int 月份
      * @Version1.0 2012-11-5 上午08:52:14 by 万久卫（jw.wan@zuche.com）
      */
-    public static int getMonthOfDate(java.util.Date p_date) {
-        java.util.Calendar c = java.util.Calendar.getInstance();
+    public static int getMonthOfDate(Date p_date) {
+        Calendar c = Calendar.getInstance();
         c.setTime(p_date);
-        return c.get(java.util.Calendar.MONTH) + 1;
+        return c.get(Calendar.MONTH) + 1;
     }
 
     /**
@@ -189,10 +189,10 @@ public class DateUtils {
      * @param p_date util.Date日期
      * @return int 日份
      */
-    public static int getDayOfDate(java.util.Date p_date) {
-        java.util.Calendar c = java.util.Calendar.getInstance();
+    public static int getDayOfDate(Date p_date) {
+        Calendar c = Calendar.getInstance();
         c.setTime(p_date);
-        return c.get(java.util.Calendar.DAY_OF_MONTH);
+        return c.get(Calendar.DAY_OF_MONTH);
     }
 
     /**
@@ -202,7 +202,7 @@ public class DateUtils {
      * @return int 周
      */
     public static int getWeekOfDate(String date) {
-        java.util.Date p_date = dateString2Date(date);
+        Date p_date = dateString2Date(date);
         return getWeekOfDate(p_date);
     }
 
@@ -213,9 +213,9 @@ public class DateUtils {
      * @return int 周
      */
     public static int getWeekOfDate(Date date) {
-        java.util.Calendar c = java.util.Calendar.getInstance();
+        Calendar c = Calendar.getInstance();
         c.setTime(date);
-        return c.get(java.util.Calendar.DAY_OF_WEEK) - 1;
+        return c.get(Calendar.DAY_OF_WEEK) - 1;
     }
 
     /**
@@ -224,10 +224,10 @@ public class DateUtils {
      * @param p_date util.Date日期
      * @return int 日份
      */
-    public static int getHourOfDate(java.util.Date p_date) {
-        java.util.Calendar c = java.util.Calendar.getInstance();
+    public static int getHourOfDate(Date p_date) {
+        Calendar c = Calendar.getInstance();
         c.setTime(p_date);
-        return c.get(java.util.Calendar.HOUR_OF_DAY);
+        return c.get(Calendar.HOUR_OF_DAY);
     }
 
     /**
@@ -236,10 +236,10 @@ public class DateUtils {
      * @param p_date util.Date日期
      * @return int 分钟
      */
-    public static int getMinuteOfDate(java.util.Date p_date) {
-        java.util.Calendar c = java.util.Calendar.getInstance();
+    public static int getMinuteOfDate(Date p_date) {
+        Calendar c = Calendar.getInstance();
         c.setTime(p_date);
-        return c.get(java.util.Calendar.MINUTE);
+        return c.get(Calendar.MINUTE);
     }
 
     /**
@@ -251,7 +251,7 @@ public class DateUtils {
      * @Version1.0 2012-11-5 上午08:58:44 by 万久卫（jw.wan@zuche.com）
      */
     public static String date2String(
-            java.util.Date p_utilDate, String p_format) {
+            Date p_utilDate, String p_format) {
         String l_result = "";
         if (p_utilDate != null) {
             SimpleDateFormat sdf = getSimpleDateFormat(p_format);
@@ -268,7 +268,7 @@ public class DateUtils {
      * @Version1.0 2012-11-5 上午08:58:58 by 万久卫（jw.wan@zuche.com）
      */
     public static String date2String(
-            java.util.Date p_utilDate) {
+            Date p_utilDate) {
         return date2String(p_utilDate, defaultPattern);
     }
 
@@ -520,8 +520,8 @@ public class DateUtils {
         for (int i = 0; i < countMonth + 1; i++) {
             //每次在原基础上累加一个月
 
-            months[i][0] = ca1.get(java.util.Calendar.YEAR);
-            months[i][1] = ca1.get(java.util.Calendar.MONTH);
+            months[i][0] = ca1.get(Calendar.YEAR);
+            months[i][1] = ca1.get(Calendar.MONTH);
             months[i][1] += 1;
             ca1.add(ca1.MONTH, 1);
         }
@@ -850,7 +850,7 @@ public class DateUtils {
         if (StringUtils.isNotBlank(time)) {
             SimpleDateFormat format = getSimpleDateFormat(defaultPattern);
             ParsePosition pos = new ParsePosition(0);
-            java.util.Date timeD = format.parse(time, pos);
+            Date timeD = format.parse(time, pos);
             if (timeD == null) {
                 format = getSimpleDateFormat(dateTimePattern);
                 pos.setIndex(0);

@@ -17,9 +17,9 @@ public interface YouZanDataDao {
 
     Integer getCountByOrderId(Map<String, Object> params);
 
-    Integer getCountByOrderNo(Map<String,Object> params);
+    Integer getCountByOrderNo(Map<String, Object> params);
 
-    OrderInfo getOrderDetail(Map<String,Object> params);
+    OrderInfo getOrderDetail(Map<String, Object> params);
 
     void updateOrderHistoryStatus(OrderHistory orderHistory);
 

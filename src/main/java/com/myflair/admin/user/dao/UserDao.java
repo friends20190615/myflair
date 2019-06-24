@@ -20,13 +20,13 @@ public interface UserDao {
   
     User selectById(Long id);
     
-    User query(Map<String,Object> params);
+    User query(Map<String, Object> params);
     
     int update(User record);
     
-    List<User> queryList(Map<String,Object> params);
+    List<User> queryList(Map<String, Object> params);
     
-    int queryCount(Map<String,Object> params);
+    int queryCount(Map<String, Object> params);
 
     
 }

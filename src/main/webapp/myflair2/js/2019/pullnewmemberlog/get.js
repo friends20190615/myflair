@@ -31,7 +31,7 @@ $(function(){
 						$(".friend_list_wrap").show().css("z-index","33");
 			            document.body.scrollTop = document.documentElement.scrollTop = 0;
 			            $(".share_wrap,.pop-save_wrap").show();
-			            $("#shareQRcode").attr("src","http://www.myflair.com.cn/getERWMImage1.do?mobile=15811559702");
+			            $("#shareQRcode").attr("src","http://www.myflair.com.cn/getERWMImage1.do?mobile="+mobile);
 					}else{
 						alert(data.msg);
 					}
@@ -65,18 +65,18 @@ $(function(){
 		$('.pop-save_wrap').hide();
 		oEvent.preventDefault(); 
 	});
+	var rlh = $(".rule_list_f").height();
 	$(".friend_list_wrap a.updown").on("click",function(){
 		var parent = $(this).parents(".friend_list_wrap");
-		var rlh = $(".rule_list_f").height(),
-			wh = $(window).height(),
-			showh = wh - 2*rlh,
-			smoveh = (wh - rlh)/2;
+		var	wh = $(window).height(),
+			showh = (wh/2)-rlh,
+			smoveh = rlh;
 		if (parent.hasClass('more') == false) {
             $(".friend_list_wrap").addClass("more");
-			$(".rule_list_f").animate({height:showh});  
+			$(".rule_list_f").animate({"height":showh});  
         }else{
 			$(".friend_list_wrap").removeClass("more");
-			$(".rule_list_f").animate({height:smoveh});  	 
+			$(".rule_list_f").animate({"height":smoveh});  	 
         }
 	})
 })

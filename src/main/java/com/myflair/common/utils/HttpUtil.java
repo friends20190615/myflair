@@ -202,7 +202,7 @@ public class HttpUtil {
         CloseableHttpClient httpClient = HttpClients.createDefault();
         CloseableHttpResponse response = null;
         String responseContent  = null;
-        com.alibaba.fastjson.JSONObject result = null;
+        JSONObject result = null;
         try {
             //创建Get请求，
             HttpGet httpGet = new HttpGet(requestUrl);

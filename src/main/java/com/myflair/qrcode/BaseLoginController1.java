@@ -55,7 +55,7 @@ public class BaseLoginController1 {
 					BufferedImage image2 = MatrixToImageWriter.toBufferedImage(bitMatrix);
 					Graphics2D g2d=(Graphics2D)image.getGraphics();
 					g2d.setColor(Color.black);
-					g2d.drawImage(image2, 255, 780, 210, 210, null);
+					g2d.drawImage(image2, 220, 765, 210, 210, null);
 					ImageIO.write(image, "PNG", response.getOutputStream());
 					image.flush();
 					image2.flush();

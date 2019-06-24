@@ -38,7 +38,7 @@ img{width:100%;vertical-align:middle}
 .rule_wrap dd ul{padding-left:1rem;}
 .rule_wrap dd li{font-size:.9rem;color:#646464;line-height:1.6rem;padding-bottom:.6rem;padding-left:0.2rem;list-style-type:decimal; }
 .rule_wrap dd li span{color:#002a64;font-weight: bold;}
-.friend_list_wrap{background-color:#f7f7f7;position:absolute;width:100%;left:0;bottom:0;padding-bottom:1.5rem;z-index:30}
+.friend_list_wrap{background-color:#f7f7f7;position:fixed;width:100%;left:0;bottom:0;padding-bottom:1.5rem;z-index:30}
 .friend_list_wrap dl.rule_list_f{height:4rem;overflow-y:auto}
 .friend_list_wrap dt{width:65%;padding:0 0 1rem 0}
 .friend_list_wrap dt span{font-size:1.1rem}

@@ -206,7 +206,7 @@ public class YouZanUtil {
         YZClient client = new DefaultYZClient(new Token(YouZanUtil.getToken())); //new Sign(appKey, appSecret)
         YouzanUmpCouponSearchParams youzanUmpCouponSearchParams = new YouzanUmpCouponSearchParams();
         youzanUmpCouponSearchParams.setPageNo(1L);
-        youzanUmpCouponSearchParams.setPageSize(1000L);
+        youzanUmpCouponSearchParams.setPageSize(500L);
         youzanUmpCouponSearchParams.setStatus("ON");
 
         YouzanUmpCouponSearch youzanUmpCouponSearch = new YouzanUmpCouponSearch();
@@ -382,9 +382,9 @@ public class YouZanUtil {
         //YouzanUmpCouponTakeResult.UmpPromocardUserTakedetail result =YouZanUtil.couponPull("13264257229", coupon.getId());
 
        // addJf("13264257229");
-       // YouzanUmpCouponSearchResult.CouponGroup coupon = YouZanUtil.getCoupon("分悦代金券");
-       // System.out.printf(getWlStat("E2018051104060704890001")+"");
-        System.out.printf(YouZanUtil.isMemOrCustomByMobile("13121775554")+"");
+        // getWlStat("E2018051104060704890001")+""
+        YouzanUmpCouponSearchResult.CouponGroup coupon = YouZanUtil.getCoupon("分悦代金券");
+        System.out.printf(coupon.toString());
     }
 
 }

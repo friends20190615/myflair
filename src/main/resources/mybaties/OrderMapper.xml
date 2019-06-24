@@ -61,7 +61,7 @@
           invite_stauts inviteStatus,order_id orderId,invite_time inviteTime,
           first_order_time firstOrderTime,return_ticket_status returnTicketStatus,
           return_ticket_time returnTicketTime from t_pull_newmember_log
-          where be_invite_mobile= #{mobile} and return_ticket_status = 0 and order_id is null
+          where be_invite_mobile= #{mobile} and return_ticket_status = 0
     </select>
 
     <select id="getInviteFans" parameterType="PullNewMember" resultType="MobileFanns">

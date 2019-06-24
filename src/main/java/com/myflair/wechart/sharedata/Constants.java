@@ -6,8 +6,8 @@ import java.util.Map;
 
 public class Constants {
 
-    private static final String MYFLAIRLXIMG="http://www.myflair.com.cn/myflair/myflair/images/2019/coupontpl/hy.jpg";
-	private static final String MYFLAIPYQRLXIMG="http://www.myflair.com.cn/myflair/myflair/images/2019/coupontpl/pyq.jpg";
+    private static final String MYFLAIRLXIMG="http://www.myflair.com.cn/myflair/myflair/images/2018/coupontpl/hy.jpg";
+	private static final String MYFLAIPYQRLXIMG="http://www.myflair.com.cn/myflair/myflair/images/2018/coupontpl/pyq.jpg";
     private static final String MYFLAIRLXCONTENT="myFlair美范， 自带高级感\n" +"去宠爱自己一下吧～";
     private static final String MYFLAIRLXTITLE="轻珠宝  无限次可替换\n" + "好友刚送你100元现金券！";
     private static final String MYFLAIRLXPYQCONTENT="myFlair 美范 | 无限次 可替换\n" +"高级感轻珠宝, 200元代金券, 快去看看！";
